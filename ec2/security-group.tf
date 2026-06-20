@@ -1,3 +1,4 @@
+
 resource "aws_security_group" "demo-sg" {
     name        = "demo-sg"
     description = "Security group for demo EC2 instance"
