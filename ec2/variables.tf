@@ -6,10 +6,10 @@ variable "aws_region" {
   default     = "ap-southeast-1"
 }
 
-variable "ami_id" {
-  description = "The ID of the AMI to use for the EC2 instance"
+variable "CIDR_block" {
+  description = "The CIDR block for the VPC"
   type        = string
-  default     = "ami-0c55b159cbfafe1f0"
+  default     = "0.0.0.0/16"
 }
 
 variable "instance_type" {
@@ -27,11 +27,10 @@ variable "key_name" {
 variable "subnet_id" {
   description = "The ID of the subnet to deploy the EC2 instance in"
   type        = string
-  default     = "subnet-12345678"
+  default     = ""
 }
 
-variable "security_group_id" {
-  description = "The ID of the security group to associate with the EC2 instance"
+variable "vpc_id" {
+  description = "If not provided, the default VPC will be used"
   type        = string
-  default     = "sg-12345678"
 }
