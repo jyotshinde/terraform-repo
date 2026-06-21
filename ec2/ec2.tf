@@ -5,4 +5,3 @@ resource "aws_instance" "ec2-demo" {
     key_name      = var.key_name
     vpc_security_group_ids = [aws_security_group.demo-sg.id]  
 }
-
