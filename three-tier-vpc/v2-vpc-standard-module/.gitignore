@@ -1,13 +1,2 @@
-# Terraform
-.terraform/
-*.tfstate
-*.tfstate.*
-.terraform.lock.hcl
-
-# Terraform plans
-*.tfplan
-
-# Variable files
-*.tfvars
-*.tfvars.json
-
+.terraform
+.terraform/*
