@@ -1,3 +1,9 @@
+variable "availability-zones" {
+    description = "The availability zones for the subnets"
+    type        = list(string)
+    default     = ["ap-southeast-1a", "ap-southeast-1b"]
+}
+
 variable "vpc-name" {
     description = "The name of the VPC"
     type        = string
@@ -27,15 +33,27 @@ variable "database-subnet-cidrs" {
     type        = list(string)
     default     = ["10.0.5.0/24", "10.0.6.0/24"]
 }
+variable "vpc-create-db-subnet-group" {
+    description = "Whether to create a DB subnet group"
+    type        = bool
+    default     = true
+} 
 
-variable "availability-zones" {
-    description = "The availability zones for the subnets"
-    type        = list(string)
-    default     = ["ap-southeast-1a", "ap-southeast-1b"]
-}   
+variable "vpc-create-database-route-table" {
+    description = "Whether to create a database route table"
+    type        = bool
+    default     = true
+}
 
 variable "nat-gateway-enabled" {
     description = "Whether to enable NAT Gateway for private subnets"
     type        = bool
     default     = true
 }
+
+variable "single-nat-gateway" {
+    description = "Whether to use a single NAT Gateway for all private subnets"
+    type        = bool
+    default     = true
+}
+
