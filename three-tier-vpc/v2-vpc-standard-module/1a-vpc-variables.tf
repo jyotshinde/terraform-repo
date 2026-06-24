@@ -1,3 +1,20 @@
+
+variable "owner" {
+    description = "The owner of the VPC"
+    type        = string
+}
+
+variable "env" {
+    description = "The environment for the VPC"
+    type        = string
+}
+
+variable "aws-region" {
+    description = "The AWS region to deploy the VPC"
+    type        = string
+    default     = "ap-southeast-1"
+}
+
 variable "availability-zones" {
     description = "The availability zones for the subnets"
     type        = list(string)
