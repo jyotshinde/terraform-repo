@@ -1,1 +1,3 @@
 gitpush.sh
+./three-tier-vpc/v1-vpc-module/.terraform
+./three-tier-vpc/v1-vpc-module/.terraform/*
